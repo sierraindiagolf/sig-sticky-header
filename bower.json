@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "homepage": "https://github.com/sierraindiagolf/sig-sticky-header.git",
   "authors": [
-    "Stefan <s.gencarau@gmail.com>"
+    "Stefan <sieraindiagolf@gmail.com>"
   ],
   "description": "A simple sticky header directive written in pure angular. No external dependencies.",
   "keywords": [
