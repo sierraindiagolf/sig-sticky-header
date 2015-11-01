@@ -1,0 +1,22 @@
+{
+  "name": "sigStickyHeader",
+  "version": "0.0.0",
+  "homepage": "https://github.com/stefan-gencarau/sig-sticky-header",
+  "authors": [
+    "Stefan <s.gencarau@gmail.com>"
+  ],
+  "description": "A simple sticky header directive written in pure angular. No external dependencies.",
+  "keywords": [
+    "sticky",
+    "header",
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
