@@ -8,10 +8,11 @@
 
         function link(scope, element) {
             var originalProperties = element.css(['position', 'top', 'left', 'zIndex']);
+            var initialBoundingClient = element[0].getBoundingClientRect();
             var positionFixedProperties = {
                 position: 'fixed',
                 top: 0,
-                left: 0,
+                left: initialBoundingClient.left,
                 zIndex: 1
             };
 
@@ -21,7 +22,8 @@
 
                 element.css(originalProperties);
 
-                if (element[0].getBoundingClientRect().top < 0) {
+                var boundingClientRect = element[0].getBoundingClientRect();
+                if (boundingClientRect.top < 0) {
                     element.css(positionFixedProperties);
                     element.addClass('sig-sh-fixed');
                     element.removeClass('sig-sh-original');
