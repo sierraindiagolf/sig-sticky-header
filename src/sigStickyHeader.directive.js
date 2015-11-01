@@ -15,18 +15,24 @@
                 zIndex: 1
             };
 
-            window.addEventListener("scroll", function() {
+            window.addEventListener("scroll", setPosition);
+
+            function setPosition() {
 
                 element.css(originalProperties);
 
                 if (element[0].getBoundingClientRect().top < 0) {
                     element.css(positionFixedProperties);
-                    element.toggleClass(['sig-sh-fixed', 'sig-sh-original']);
+                    element.addClass('sig-sh-fixed');
+                    element.removeClass('sig-sh-original');
                 } else {
                     element.css(originalProperties);
-                    element.toggleClass(['sig-sh-fixed', 'sig-sh-original']);
+                    element.removeClass('sig-sh-fixed');
+                    element.addClass('sig-sh-original');
                 }
-            });
+            }
+
+            setPosition();
         }
 
         directive = {
