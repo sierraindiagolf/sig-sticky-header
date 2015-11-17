@@ -27,26 +27,15 @@
                 if (boundingClientRect.top < 0) {
                     element.css(positionFixedProperties);
                     element.addClass('sig-sh-fixed');
+                    element.addClass(attributes.shClassesFixed);
                     element.removeClass('sig-sh-original');
-                    addClasses(attributes, 'Fixed');
+                    element.removeClass(attributes.shClassesOriginal);
                 } else {
                     element.css(originalProperties);
                     element.removeClass('sig-sh-fixed');
+                    element.removeClass(attributes.shClassesFixed);
                     element.addClass('sig-sh-original');
-                    addClasses(attributes, 'Original');
-                }
-            }
-
-            function addClasses(attributes, position, addOrRemove) {
-                if (!addOrRemove) {
-                    var pos = position === 'Fixed' ? 'Original' : 'Fixed';
-                    addClasses(attributes, pos, element.removeClass);
-                }
-
-                addOrRemove = element.addClass;
-
-                if (attributes['shClasses' + position]) {
-                    addOrRemove(attributes['shClasses' + position]);
+                    element.addClass(attributes.shClassesOriginal);
                 }
             }
 
