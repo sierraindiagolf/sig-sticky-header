@@ -13,6 +13,7 @@
                 position: 'fixed',
                 top: 0,
                 left: initialBoundingClient.left,
+                width: initialBoundingClient.width,
                 zIndex: 1
             };
 
